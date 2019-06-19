@@ -21,13 +21,13 @@ pipeline {
 
         stage('Test') {
             steps {
-                sh 'npm run testInternal -- --coverage'
+                sh 'npm run test'
             }
         }
 
                 stage('Deploy') {
             steps {
-                sh 'deploy'
+                sh 'npm run deploy'
             }
         }
 /*        stage('Deploy') {
